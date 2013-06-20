@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2013 Kevin Wang
+
+    This file is part of Tahrir.
+
+    Tahrir is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Tahrir is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Tahrir.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>tahrir.android</groupId>
+    <artifactId>main</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>apk</packaging>
+    <name>Tahrir - Android App</name>
+
+    <url>https://github.com/sanity/tahrir-android</url>
+    <inceptionYear>2013</inceptionYear>
+    <issueManagement>
+        <system>GitHub Issue Tracking</system>
+        <url>https://github.com/sanity/tahrir-android/issues</url>
+    </issueManagement>
+    <licenses>
+        <license>
+            <name>GPLv3</name>
+            <url>LICENSE</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>See homepage and mailinglist for contributors.</name>
+            <id>tahrir-android</id>
+            <url>https://github.com/sanity/tahrir-android</url>
+            <roles>
+                <role>Developer</role>
+                <role>Contributor</role>
+            </roles>
+        </developer>
+        <developer>
+            <name>Kevin Wang</name>
+            <email>kevixw@gmail.com</email>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+    
+    <mailingLists>
+        <mailingList>
+            <name>Tahrir Development</name>
+            <archive>https://groups.google.com/forum/?fromgroups#!forum/tahrir-development</archive>
+        </mailingList>
+    </mailingLists>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>2.3.3</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <sourceDirectory>src</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                    <artifactId>android-maven-plugin</artifactId>
+                    <version>3.6.0</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <configuration>
+                    <sdk>
+                        <platform>10</platform>
+                    </sdk>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
